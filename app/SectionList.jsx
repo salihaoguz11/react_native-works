@@ -61,12 +61,14 @@ const MENU = [
 const SectionListCom = () => {
   return (
     <View style={styles.container}>
-      <SectionList
-        sections={MENU}
-        keyExtractor={(item) => item.id}
-        renderItem={({ item }) => <Item name={item.title} />}
-        renderSectionHeader={({ section }) => <Title name={section.title} />}
-      />
+      <View style={{ backgroundColor: "red", width: "80%" }}>
+        <SectionList
+          sections={MENU}
+          keyExtractor={(item) => item.id}
+          renderItem={({ item }) => <Item name={item.title} />}
+          renderSectionHeader={({ section }) => <Title name={section.title} />}
+        />
+      </View>
     </View>
   );
 };
@@ -98,6 +100,7 @@ const Item = ({ name }) => {
         borderRadius: 15,
         justifyContent: "center",
         paddingLeft: 10,
+        margin: 3,
       }}
     >
       <Text>{name}</Text>
@@ -114,5 +117,6 @@ const styles = StyleSheet.create({
     paddingTop: 5,
     paddingRight: 5,
     paddingLeft: 5,
+    marginTop: 65,
   },
 });
