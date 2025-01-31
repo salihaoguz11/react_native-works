@@ -10,7 +10,6 @@ import {
 export default function Index() {
   return (
     <View style={styles.indexContainer}>
-      <Text>Edit app/index.tsx to edit this screen.</Text>
       <TouchableOpacity
         style={{
           backgroundColor: "blue",

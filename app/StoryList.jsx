@@ -18,6 +18,7 @@ const StoryList = () => {
       <FlatList
         data={DATA}
         horizontal
+        showsHorizontalScrollIndicator={false}
         keyExtractor={(item) => item.id}
         renderItem={({ item }) => (
           <Story name={item.name} image={item.avatar} seen={item.seen} />

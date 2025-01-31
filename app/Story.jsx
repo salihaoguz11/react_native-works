@@ -4,8 +4,11 @@ import React from "react";
 const Story = ({ image, name, seen }) => {
   return (
     <View style={styles.container}>
-      <Image source={{ uri: image }} style={styles.image} />
-      <Text style={styles.storyText}>{name}</Text>
+      <Image
+        source={{ uri: image }}
+        style={[styles.image, seen ? styles.seen : styles.notseen]}
+      />
+      <Text style={styles.storyText}>{name.substring(0, 8)}</Text>
     </View>
   );
 };
@@ -29,10 +32,21 @@ const styles = StyleSheet.create({
     borderRadius: 45,
     alignItems: "center",
   },
-  storyText: {},
+  storyText: {
+    fontWeight: "bold",
+  },
   image: {
     width: 90,
     height: 90,
     borderRadius: 45,
+    borderWidth: 3,
+  },
+  seen: {
+    borderColor: "gray",
+    borderStyle: "solid",
+  },
+  notseen: {
+    borderColor: "blue",
+    borderStyle: "dashed",
   },
 });

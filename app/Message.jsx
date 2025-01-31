@@ -1,7 +1,11 @@
 import { StyleSheet, Text, View, Image } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 
 const message = ({ name, avatar, news, message, online }) => {
+  useEffect(() => {
+    console.log("rendered");
+  });
+
   return (
     <View style={styles.container}>
       <View style={styles.box}>

@@ -1,9 +1,9 @@
 import { FlatList, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useEffect } from "react";
 import { faker } from "@faker-js/faker";
 import Message from "./Message";
 
-const DATA = Array(20)
+const DATA = Array(30)
   .fill(null)
   .map((e) => ({
     id: faker.string.uuid(),
@@ -15,6 +15,9 @@ const DATA = Array(20)
   }));
 
 const messageList = () => {
+  useEffect(() => {
+    console.log("rendered");
+  });
   return (
     <View style={{ width: "90%", padding: 10 }}>
       <FlatList
