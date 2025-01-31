@@ -61,7 +61,7 @@ const MENU = [
 const SectionListCom = () => {
   return (
     <View style={styles.container}>
-      <View style={{ backgroundColor: "red", width: "80%" }}>
+      <View style={{ width: "80%" }}>
         <SectionList
           sections={MENU}
           keyExtractor={(item) => item.id}
